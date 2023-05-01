@@ -1,0 +1,107 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="height: 800px;">
+            <div class="col-md-6" style="height: 800px;width: 550px;">
+                <div class="row" style="height: 130px;">
+                    <div class="col" style="height: 130px;"><small><strong>Select Neck Position</strong><br></small><img class="img-thumbnail" src="{% static 'neck_photos_020.png' %}" width="154" height="165" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'neck_photos_20+.png' %}" width="165" height="180" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'neck_photos_in_extension.png' %}" style="width: 85px;height: 95px;"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><small>Neck Adjustments (select one if applicable)<strong>&nbsp;</strong></small>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="width: 95.975px;font-size: 12px;">Neck is twisted</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2" style="width: 130.975px;font-size: 12px;">Neck is side bending</label></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="height: 125px;"><small><strong>Select Trunk Position</strong><br></small><img class="img-thumbnail" src="{% static 'trunk_0.png' %}" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'trunk_0-20_in_extension.png' %}" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'trunk_0-20.png' %}" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'trunk_20+_in extension.png' %}" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'trunk_20-60.png'%}" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'trunk_60+.png'%}" style="width: 85px;height: 95px;"></div>
+                </div>
+                <div class="row">
+                    <div class="col"><small>Trunk Adjustments (select one if applicable)<br></small>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3" style="width: 95.975px;font-size: 12px;">Trunk is twisted</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4"><label class="form-check-label" for="formCheck-4" style="width: 130.975px;font-size: 12px;">Trunk is side bending</label></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="height: 130px;"><small><strong>Select Leg Position</strong><br></small><img class="img-thumbnail" src="{% static 'leg_position_bilateral.png' %}" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'leg_position_raised.png' %}" style="width: 85px;height: 95px;"></div>
+                </div>
+                <div class="row" style="height: 130px;">
+                    <div class="col"><small>Leg Adjustments (select one if applicable)<br></small><img src="{% static 'leg_position_30-60.png'%}" style="width: 85px;height: 95px;"><img src="{% static 'leg_position_60+.png' %}" style="width: 85px;height: 95px;"></div>
+                </div>
+                <div class="row" style="height: 80px;">
+                    <div class="col"><small><strong>Force/Load</strong><br></small>
+                        <div class="form-check" style="width: 220px;"><input class="form-check-input" type="checkbox" id="formCheck-5"><label class="form-check-label" for="formCheck-5" style="width: 125.975px;font-size: 12px;">Load is less than 11 Ibs</label></div>
+                        <div class="form-check" style="width: 220px;"><input class="form-check-input" type="checkbox" id="formCheck-6"><label class="form-check-label" for="formCheck-6" style="width: 190.975px;font-size: 12px;">Load is less than 11 and 22 Ibs</label></div>
+                    </div>
+                    <div class="col"><small><br></small>
+                        <div class="form-check" style="width: 220px;"><input class="form-check-input" type="checkbox" id="formCheck-7"><label class="form-check-label" for="formCheck-7" style="width: 190.975px;font-size: 12px;">Load is greater than 22 Ibs</label></div>
+                        <div class="form-check" style="width: 240px;"><input class="form-check-input" type="checkbox" id="formCheck-8"><label class="form-check-label" for="formCheck-8" style="width: 230.975px;font-size: 12px;">Select if shock or rapid build up force</label></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="height: 800px;width: 550px;">
+                <div class="row" style="height: 130px;">
+                    <div class="col"><small><strong>Select Upper Arm Position</strong><br></small><img class="img-thumbnail" src="{% static 'upper_arm 20-20.png' %}" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'upper_arm_20_in_extension.png' %}" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'upper_arm_20-45.png' %}" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'upper_arm_45-90.png' %}" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'upper_arm_90+.png' %}" style="width: 85px;height: 95px;"></div>
+                </div>
+                <div class="row" style="height: 100px;">
+                    <div class="col-xl-8" style="height: 100px;width: 550px;"><small>Upper arm adjustments(select one if applicable)<strong>&nbsp;</strong></small>
+                        <div class="form-check" style="width: 220px;"><input class="form-check-input" type="checkbox" id="formCheck-9"><label class="form-check-label" for="formCheck-9" style="width: 95.975px;font-size: 12px;">Shoulder is raised</label></div>
+                        <div class="form-check" style="width: 220px;"><input class="form-check-input" type="checkbox" id="formCheck-10"><label class="form-check-label" for="formCheck-10" style="width: 160.975px;font-size: 12px;">The upper arm is abducted</label></div>
+                        <div class="form-check" style="width: 260px;"><input class="form-check-input" type="checkbox" id="formCheck-11"><label class="form-check-label" for="formCheck-11" style="width: 230.975px;font-size: 12px;">Arm is supported or person is leaning</label></div>
+                    </div>
+                </div>
+                <div class="row" style="height: 125px;">
+                    <div class="col"><small><strong>Select Lower Arm Position</strong><br></small><img class="img-thumbnail" src="{% static 'lower_arm_100+.png' %}" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'lower_arm_60-100.png' %}" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'lower_arm_0-60.png' %}" style="width: 85px;height: 95px;"></div>
+                </div>
+                <div class="row" style="height: 125px;">
+                    <div class="col"><small><strong>Select Wrist Position</strong><br></small><img class="img-thumbnail" src="{% static 'wrist_15-15.png' %}" style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'wrist_15+.png' %}" style="width: 85px;height: 95px;"></div>
+                </div>
+                <div class="row" style="height: 76px;">
+                    <div class="col"><small>Wrist adjustments(select one if applicable)<strong>&nbsp;</strong></small>
+                        <div class="form-check" style="width: 250px;"><input class="form-check-input" type="checkbox" id="formCheck-12"><label class="form-check-label" for="formCheck-12" style="width: 210.975px;font-size: 12px;">Wrist is twisted</label></div>
+                        <div class="form-check" style="width: 250px;"><input class="form-check-input" type="checkbox" id="formCheck-13"><label class="form-check-label" for="formCheck-13" style="width: 210.975px;font-size: 12px;">Wrist is side bending</label></div>
+                    </div>
+                </div>
+                <div class="row" style="height: 76px;">
+                    <div class="col"><small><strong>Coupling</strong><br></small>
+                        <div class="form-check" style="width: 160px;"><input class="form-check-input" type="checkbox" id="formCheck-14"><label class="form-check-label" for="formCheck-14" style="width: 120.975px;font-size: 12px;">Good</label></div>
+                        <div class="form-check" style="width: 160px;"><input class="form-check-input" type="checkbox" id="formCheck-15"><label class="form-check-label" for="formCheck-15" style="width: 120.975px;font-size: 12px;">Poor</label></div>
+                    </div>
+                    <div class="col"><small><br></small>
+                        <div class="form-check" style="width: 160px;"><input class="form-check-input" type="checkbox" id="formCheck-16"><label class="form-check-label" for="formCheck-16" style="width: 120.975px;font-size: 12px;">Fair</label></div>
+                        <div class="form-check" style="width: 160px;"><input class="form-check-input" type="checkbox" id="formCheck-17"><label class="form-check-label" for="formCheck-17" style="width: 120.975px;font-size: 12px;">Unacceptable</label></div>
+                    </div>
+                </div>
+                <div class="row" style="height: 100px;">
+                    <div class="col" style="height: 100px;"><small><strong>Activity Score (Select all that apply)</strong><br></small>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-18"><label class="form-check-label" for="formCheck-18" style="width: 410.975px;font-size: 12px;">Select if there is 1 more body parts are held for longer than 1 minute (static)</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-19"><label class="form-check-label" for="formCheck-19" style="width: 410.975px;font-size: 12px;">Select if there are repeated small range actions (more than 4x minute)</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-20"><label class="form-check-label" for="formCheck-20" style="width: 480.975px;font-size: 12px;">Select if there is an action causes rapid large changes in postures/unstable base</label></div>
+                    </div>
+                </div>
+                <div class="row" style="height: 60px;">
+                    <div class="col" style="height: 60px;width: 275px;"></div>
+                    <div class="col" style="height: 60px;"><button class="btn btn-primary" type="button" style="width: 250px;">Calculate final REBA score</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
+{% endblock content %}
