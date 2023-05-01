@@ -56,6 +56,6 @@ This project was done by me as a assignment for an internship.
    In your web browser enter the address : http://localhost:8000 or http://127.0.0.1:8000/
 
 # Working:
-[![Watch the video](https://img.youtube.com/vi/qIK-vfTig6c/0.jpg)](https://youtu.be/qIK-vfTig6c)
+
 
 # Screenshots :
