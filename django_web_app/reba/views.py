@@ -19,6 +19,8 @@ def home(request):
 def rebaWithoutVideo(request):
     return render(request, 'reba/rebaWithoutVideo.html')
 
+def rebaWithVideo(request):
+    return render(request, 'reba/rebaWithVideo.html')
    
 def getfile(request):
    return serve(request, 'File')
