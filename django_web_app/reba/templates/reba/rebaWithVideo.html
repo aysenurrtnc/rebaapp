@@ -1,0 +1,104 @@
+{% extends "reba/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <script src="../../static/reba/myscript.js"></script>
+</head>
+
+<body onload="video()">
+    <input type="button" onclick="disp_prompt()" value="Click to enter YouTube URL" class="btn-primary"
+        style="margin-top: 4%; margin-left: 40%; font-size:large; padding: 15px; border-radius: 4px;">
+    <br><br>
+
+    <iframe id="video" width="50%" height="450vh" style="margin-top:25vh; margin-right:-20vh; float:right" src=""
+        frameborder="0" allowfullscreen></iframe>
+
+    <div class="container">
+        <div class="row">
+            <div class="col" style="height: 130px;"><small><strong>Select Neck Position</strong><br></small><img
+                    class="img-thumbnail" src="{% static 'neck_photos_020.png' %}" width="154" height="165"
+                    style="width: 85px;height: 95px;"><img class="img-thumbnail"
+                    src="{% static 'neck_photos_20+.png' %}" width="165" height="180"
+                    style="width: 85px;height: 95px;"><img class="img-thumbnail"
+                    src="{% static 'neck_photos_in_extension.png' %}" style="width: 85px;height: 95px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><small>Neck Adjustments (select one if applicable)<strong>&nbsp;</strong></small>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label
+                        class="form-check-label" for="formCheck-1" style="width: 95.975px;font-size: 12px;">Neck
+                        is twisted</label>
+                </div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label
+                        class="form-check-label" for="formCheck-2" style="width: 130.975px;font-size: 12px;">Neck is
+                        side
+                        bending</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="height: 125px;"><small><strong>Select Trunk
+                        Position</strong><br></small><img class="img-thumbnail" src="{% static 'trunk_0.png' %}"
+                    style="width: 85px;height: 95px;"><img class="img-thumbnail"
+                    src="{% static 'trunk_0-20_in_extension.png' %}" style="width: 85px;height: 95px;"><img
+                    class="img-thumbnail" src="{% static 'trunk_0-20.png' %}" style="width: 85px;height: 95px;"><img
+                    class="img-thumbnail" src="{% static 'trunk_20+_in extension.png' %}"
+                    style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'trunk_20-60.png'%}"
+                    style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'trunk_60+.png'%}"
+                    style="width: 85px;height: 95px;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"><small>Trunk Adjustments (select one if applicable)<br></small>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label
+                        class="form-check-label" for="formCheck-3" style="width: 95.975px;font-size: 12px;">Trunk is
+                        twisted</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4"><label
+                        class="form-check-label" for="formCheck-4" style="width: 130.975px;font-size: 12px;">Trunk
+                        is side bending</label></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="height: 130px;"><small><strong>Select Leg Position</strong><br></small><img
+                    class="img-thumbnail" src="{% static 'leg_position_bilateral.png' %}"
+                    style="width: 85px;height: 95px;"><img class="img-thumbnail"
+                    src="{% static 'leg_position_raised.png' %}" style="width: 85px;height: 95px;"></div>
+        </div>
+        <div class="row" style="height: 130px;">
+            <div class="col"><small>Leg Adjustments (select one if applicable)<br></small><img
+                    src="{% static 'leg_position_30-60.png'%}" style="width: 85px;height: 95px;"><img
+                    src="{% static 'leg_position_60+.png' %}" style="width: 85px;height: 95px;"></div>
+        </div>
+        <div class="row" style="height:80px; width:100px;">
+            <div class="col"><small><strong>Force/Load</strong><br></small>
+                <div class="form-check" style="width: 220px;"><input class="form-check-input" type="checkbox"
+                        id="formCheck-5"><label class="form-check-label" for="formCheck-5"
+                        style="width: 125.975px;font-size: 12px;">Load is less than 11 Ibs</label></div>
+                <div class="form-check" style="width: 220px;"><input class="form-check-input" type="checkbox"
+                        id="formCheck-6"><label class="form-check-label" for="formCheck-6"
+                        style="width: 190.975px;font-size: 12px;">Load is less than 11 and 22 Ibs</label></div>
+            </div>
+            <div class="col">
+                <div class="form-check" style="width: 220px;"><input class="form-check-input" type="checkbox"
+                        id="formCheck-7"><label class="form-check-label" for="formCheck-7"
+                        style="width: 190.975px;font-size: 12px;">Load is greater than 22 Ibs</label></div>
+                <div class="form-check" style="width: 240px;"><input class="form-check-input" type="checkbox"
+                        id="formCheck-8"><label class="form-check-label" for="formCheck-8"
+                        style="width: 230.975px;font-size: 12px;">Select if shock or rapid build up force</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="button"
+        style="width: 100px; margin-left:42%; margin-top:3%; padding:10px;">Next</button>
+    </br>
+</body>
+
+</html>
+
+{% endblock content %}
