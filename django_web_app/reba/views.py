@@ -14,10 +14,10 @@ def home(request):
     context = {
         'posts': Post.objects.all()
     }
-    return render(request, 'blog/home.html', context)
+    return render(request, 'reba/home.html', context)
 
 def rebaWithoutVideo(request):
-    return render(request, 'blog/rebaWithoutVideo.html')
+    return render(request, 'reba/rebaWithoutVideo.html')
 
    
 def getfile(request):
@@ -25,7 +25,7 @@ def getfile(request):
 
 
 def about(request):
-    return render(request, 'blog/about.html', {'title': 'About'})
+    return render(request, 'reba/about.html', {'title': 'About'})
 
 
 

@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'blog.apps.BlogConfig',
+    'reba.apps.RebaConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
     'crispy_bootstrap4',
@@ -130,5 +130,5 @@ MEDIA_URL = 'http://127.0.0.1:8000/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL = 'blog-home'
+LOGIN_REDIRECT_URL = 'reba-home'
 LOGIN_URL = 'login'
