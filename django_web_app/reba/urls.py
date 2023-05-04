@@ -6,5 +6,4 @@ urlpatterns = [
     path('about/', views.about, name='reba-about'),
     path('rebaWithoutVideo/', views.rebaWithoutVideo, name='reba-rebaWithoutVideo'),
     path('rebaWithVideo/', views.rebaWithVideo, name='reba-rebaWithVideo' ),
-
 ]
