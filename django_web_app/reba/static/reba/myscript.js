@@ -17,18 +17,21 @@ function extractVideoId(url) {
   }
   return videoId;
 }
+
 function video() {
   var defaultVideoId = "92B7G1FPI8c"; // Replace with the actual default video ID
   var defaultIframeSrc = "https://www.youtube.com/embed/" + defaultVideoId;
   document.getElementById("video").src = defaultIframeSrc;
 }
+
 function FetchOtherPage() {
   var FirstPage = document.getElementById("FirstPage");
   var SecondPage = document.getElementById("SecondPage");
-  if (FirstPage.style.display === "none") {
+  if (FirstPage.style.display === "block") {
+    FirstPage.style.display = "none";
+    SecondPage.style.display = "block";
+  } else if (SecondPage.style.display === "block") {
     FirstPage.style.display = "block";
     SecondPage.style.display = "none";
-  } else if (SecondPage.style.display === "block") {
-    FirstPage.style.display = "none";
   }
 }

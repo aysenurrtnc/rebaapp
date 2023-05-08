@@ -1,24 +1,47 @@
 from django.db import models
-from django.utils import timezone
 from django.contrib.auth.models import User
-from django.urls import reverse
-import os
+	
+class Reba(models.Model):
+	rebaID = models.IntegerField(primary_key = True)
+	userID = models.OneToOneField(User, on_delete=models.CASCADE)
 
-class Post(models.Model):
-	title = models.CharField(max_length=100)
-	file = models.FileField(null=True,blank=True,upload_to='Files')
-	content = models.TextField()
-	date_posted = models.DateTimeField(default=timezone.now)
-	author = models.ForeignKey(User, on_delete=models.CASCADE)
+	neckPosition = models.CharField(max_length=30)
+	neckAdjust = models.CharField(max_length=30)
+	neckScore = models.IntegerField()
+
+	trunkPosition = models.CharField(max_length=30)
+	trunkAdjust = models.CharField(max_length=30)
+	trunkScore = models.IntegerField()
+
+	legPosition = models.CharField(max_length=30)
+	legScore = models.IntegerField()
+
+	postureScoreA = models.IntegerField()
+	flScore = models.IntegerField()
+	scoreA = models.IntegerField()
+
+	upperArmPosition = models.CharField(max_length=30)
+	upperArmAdjust = models.CharField(max_length=30)
+	upperArmScore = models.IntegerField()
+
+	lowerArmPosition = models.CharField(max_length=30)
+	lowerArmScore = models.IntegerField()
+
+	wristPosition = models.CharField(max_length=30)
+	wristAdjust = models.CharField(max_length=30)
+	wristScore = models.IntegerField()
+
+	postureScoreB = models.IntegerField()
+	
+	couplingScore = models.IntegerField()
+
+	scoreB = models.IntegerField()
+
+	tableScoreC = models.IntegerField()
+
+	activityScore = models.IntegerField()
+
+	finalRebaScore = models.IntegerField()
 
 	def __str__(self):
-		return self.title
-
-	def extension(self):
-		name, extension = os.path.splitext(self.file.name)
-		return extension
-
-	def get_absolute_url(self):
-		return reverse('post-detail', kwargs={'pk': self.pk})
-
-        
+		return f"Score is {self.finalRebaScore}"

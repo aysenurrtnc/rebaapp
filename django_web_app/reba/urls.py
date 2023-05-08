@@ -5,5 +5,6 @@ urlpatterns = [
     path('', views.home, name='reba-home'),
     path('about/', views.about, name='reba-about'),
     path('rebaWithoutVideo/', views.rebaWithoutVideo, name='reba-rebaWithoutVideo'),
-    path('rebaWithVideo/', views.rebaWithVideo, name='reba-rebaWithVideo' ),
+    path('rebaWithVideo/', views.rebaWithVideo, name='reba-rebaWithVideo'),
+    path('rebaResults/', views.rebaResults, name='reba-results'),
 ]

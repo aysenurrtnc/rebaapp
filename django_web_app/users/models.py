@@ -5,6 +5,10 @@ from PIL import Image
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=25)
+    surname = models.CharField(max_length=25)
+    #birthdate = ""
+    gender = models.CharField(max_length=6)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
 
     def __str__(self):
