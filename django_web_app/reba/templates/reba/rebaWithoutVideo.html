@@ -17,211 +17,214 @@
 </head>
 
 <body>
-    <div class="container" style="width:50%;border-style:double; border-color:black;float: left; margin-left: -6%;">
-        <div class="row">
-            <div class="col-md">
-                <h5>
-                    <b>Select Neck Position</b>
-                </h5>
-                <img class="img-thumbnail" src="{% static 'neck_photos_020.png' %}" width="154" height="165"
-                    style="width: 85px;height: 95px;">
-                <img class="img-thumbnail" src="{% static 'neck_photos_20+.png' %}" width="165" height="180"
-                    style="width: 85px;height: 95px;"><img class="img-thumbnail"
-                    src="{% static 'neck_photos_in_extension.png' %}" style="width: 85px;height: 95px;"><br>
-                <div>
-                    <input type="radio" name="neck_position" value="1" style="margin-left:8%; display: inline-block;">
-                    <input type="radio" name="neck_position" value="2" style="margin-left:14%;">
-                    <input type="radio" name="neck_position" value="2" style="margin-left:14%;">
+    <form action="{% url 'reba-results' %}" method="post">
+        {% csrf_token %}
+        <div class="container" style="width:50%;border-style:double; border-color:black;float: left; margin-left: -6%;">
+            <div class="row">
+                <div class="col-md">
+                    <h5>
+                        <b>Select Neck Position</b>
+                    </h5>
+                    <img class="img-thumbnail" src="{% static 'neck_photos_020.png' %}" width="154" height="165"
+                        style="width: 85px;height: 95px;">
+                    <img class="img-thumbnail" src="{% static 'neck_photos_20+.png' %}" width="165" height="180"
+                        style="width: 85px;height: 95px;"><img class="img-thumbnail"
+                        src="{% static 'neck_photos_in_extension.png' %}" style="width: 85px;height: 95px;"><br>
+                    <div>
+                        <input type="radio" name="neck_position" value="1" style="margin-left:8%; display: inline-block;">
+                        <input type="radio" name="neck_position" value="2" style="margin-left:14%;">
+                        <input type="radio" name="neck_position" value="2" style="margin-left:14%;">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <h6>Neck Adjustments (select one if applicable)</h6>
+                    <input type="radio" name="neck_adjustment" value="1">
+                    <label for="neck_adjustment">Neck is twisted</label><br>
+                    <input type="radio" name="neck_adjustment" value="1">
+                    <label for="neck_adjustment">Neck is side bending</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <h5>
+                        <b>Select Trunk Position</b>
+                    </h5>
+                    <img class="img-thumbnail" src="{% static 'trunk_0.png' %}" style="width: 85px;height: 95px;"><img
+                        class="img-thumbnail" src="{% static 'trunk_0-20_in_extension.png' %}"
+                        style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'trunk_0-20.png' %}"
+                        style="width: 85px;height: 95px;"><img class="img-thumbnail"
+                        src="{% static 'trunk_20+_in extension.png' %}" style="width: 85px;height: 95px;"><img
+                        class="img-thumbnail" src="{% static 'trunk_20-60.png'%}" style="width: 85px;height: 95px;"><img
+                        class="img-thumbnail" src="{% static 'trunk_60+.png'%}" style="width: 85px;height: 95px;"><br>
+                    <div>
+                        <input type="radio" name="trunk_position" value="1" style="margin-left:7%; display: inline-block;">
+                        <input type="radio" name="trunk_position" value="2" style="margin-left:13%;">
+                        <input type="radio" name="trunk_position" value="2" style="margin-left:12%;">
+                        <input type="radio" name="trunk_position" value="3" style="margin-left:14%;">
+                        <input type="radio" name="trunk_position" value="3" style="margin-left:12%;">
+                        <input type="radio" name="trunk_position" value="4" style="margin-left:13%;">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <h6>Trunk Adjustments (select one if applicable)</h6>
+                    <input type="radio" name="trunk_adjustment" value="1">
+                    <label for="trunk_adjustment">Trunk is twisted</label><br>
+                    <input type="radio" name="trunk_adjustment" value="1">
+                    <label for="trunk_adjustment">Trunk is side bending</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <h5>
+                        <b>Select Leg Position</b>
+                    </h5>
+                    <img class="img-thumbnail" src="{% static 'leg_position_bilateral.png' %}"
+                        style="width: 85px;height: 95px;"><img class="img-thumbnail"
+                        src="{% static 'leg_position_raised.png' %}" style="width: 85px;height: 95px;"><br>
+                    <div>
+                        <input type="radio" name="leg_position" value="1" style="margin-left:7%; display: inline-block;">
+                        <input type="radio" name="leg_position" value="2" style="margin-left:13%;">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <h6>Leg Adjustments (select one if applicable)</h6>
+                    <img src="{% static 'leg_position_30-60.png'%}" style="width: 85px;height: 95px;"><img
+                        src="{% static 'leg_position_60+.png' %}" style="width: 85px;height: 95px;"><br>
+                    <div>
+                        <input type="radio" name="leg_adjustments" value="1" style="margin-left:7%; display: inline-block;">
+                        <input type="radio" name="leg_adjustments" value="2" style="margin-left:13%;">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md">
+                    <h6>Force/Load</h6>
+                    <input type="radio" name="force_load" value="1">
+                    <label for="force_load">Load is less than 11 Ibs</label><br>
+                    <input type="radio" name="force_load" value="1">
+                    <label for="force_load">Load is less than 11 Ibs and 22 Ibs</label><br>
+                    <input type="radio" name="force_load" value="1">
+                    <label for="force_load">Load is greater than 22 Ibs</label><br>
+                    <input type="checkbox" id="force_load2" name="force_load2" value="1">
+                    <label for="force_load2">Select if shock or rapid build up force</label>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md">
-                <h6>Neck Adjustments (select one if applicable)</h6>
-                <input type="radio" name="neck_adjustment" value="1">
-                <label for="neck_adjustment">Neck is twisted</label><br>
-                <input type="radio" name="neck_adjustment" value="1">
-                <label for="neck_adjustment">Neck is side bending</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md">
-                <h5>
-                    <b>Select Trunk Position</b>
-                </h5>
-                <img class="img-thumbnail" src="{% static 'trunk_0.png' %}" style="width: 85px;height: 95px;"><img
-                    class="img-thumbnail" src="{% static 'trunk_0-20_in_extension.png' %}"
-                    style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'trunk_0-20.png' %}"
-                    style="width: 85px;height: 95px;"><img class="img-thumbnail"
-                    src="{% static 'trunk_20+_in extension.png' %}" style="width: 85px;height: 95px;"><img
-                    class="img-thumbnail" src="{% static 'trunk_20-60.png'%}" style="width: 85px;height: 95px;"><img
-                    class="img-thumbnail" src="{% static 'trunk_60+.png'%}" style="width: 85px;height: 95px;"><br>
-                <div>
-                    <input type="radio" name="trunk_position" value="1" style="margin-left:7%; display: inline-block;">
-                    <input type="radio" name="trunk_position" value="2" style="margin-left:13%;">
-                    <input type="radio" name="trunk_position" value="2" style="margin-left:12%;">
-                    <input type="radio" name="trunk_position" value="3" style="margin-left:14%;">
-                    <input type="radio" name="trunk_position" value="3" style="margin-left:12%;">
-                    <input type="radio" name="trunk_position" value="4" style="margin-left:13%;">
+        <div class="container" style="width:auto;border-style:double; border-color:rgb(0, 0, 0);float: right">
+            <div class="row">
+                <div class="col-md">
+                    <h5>
+                        <b>Select Upper Arm Position</b>
+                    </h5>
+                    <img class="img-thumbnail" src="{% static 'upper_arm 20-20.png' %}"
+                        style="width: 85px;height: 95px;"><img class="img-thumbnail"
+                        src="{% static 'upper_arm_20_in_extension.png' %}" style="width: 85px;height: 95px;"><img
+                        class="img-thumbnail" src="{% static 'upper_arm_20-45.png' %}"
+                        style="width: 85px;height: 95px;"><img class="img-thumbnail"
+                        src="{% static 'upper_arm_45-90.png' %}" style="width: 85px;height: 95px;"><img
+                        class="img-thumbnail" src="{% static 'upper_arm_90+.png' %}" style="width: 85px;height: 95px;">
+                    <br>
+                    <div>
+                        <input type="radio" name="upper_arm_position" value="1" style="margin-left:8%;">
+                        <input type="radio" name="upper_arm_position" value="2" style="margin-left:11%;">
+                        <input type="radio" name="upper_arm_position" value="2" style="margin-left:13%;">
+                        <input type="radio" name="upper_arm_position" value="3" style="margin-left:12%;">
+                        <input type="radio" name="upper_arm_position" value="4" style="margin-left:12%;">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md">
-                <h6>Trunk Adjustments (select one if applicable)</h6>
-                <input type="radio" name="trunk_adjustment" value="1">
-                <label for="trunk_adjustment">Trunk is twisted</label><br>
-                <input type="radio" name="trunk_adjustment" value="1">
-                <label for="trunk_adjustment">Trunk is side bending</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md">
-                <h5>
-                    <b>Select Leg Position</b>
-                </h5>
-                <img class="img-thumbnail" src="{% static 'leg_position_bilateral.png' %}"
-                    style="width: 85px;height: 95px;"><img class="img-thumbnail"
-                    src="{% static 'leg_position_raised.png' %}" style="width: 85px;height: 95px;"><br>
-                <div>
-                    <input type="radio" name="leg_position" value="1" style="margin-left:7%; display: inline-block;">
-                    <input type="radio" name="leg_position" value="2" style="margin-left:13%;">
+            <div class="row">
+                <div class="col-md">
+                    <h6>Upper Arm Adjustments (if select one applicable)</h6>
+                    <input type="checkbox" id="upper_arm_adjustment1" name="upper_arm_adjustment1" value="1">
+                    <label for="upper_arm_adjustment1">Shoulder is raised</label><br>
+                    <input type="checkbox" id="upper_arm_adjustment2" name="upper_arm_adjustment2" value="1">
+                    <label for="upper_arm_adjustment2">The upper arm is abducted</label><br>
+                    <input type="checkbox" id="upper_arm_adjustment3" name="upper_arm_adjustment3" value="-1">
+                    <label for="upper_arm_adjustment3">Arm is supported or person is leaning</label>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md">
-                <h6>Leg Adjustments (select one if applicable)</h6>
-                <img src="{% static 'leg_position_30-60.png'%}" style="width: 85px;height: 95px;"><img
-                    src="{% static 'leg_position_60+.png' %}" style="width: 85px;height: 95px;"><br>
-                <div>
-                    <input type="radio" name="leg_adjustments" value="1" style="margin-left:7%; display: inline-block;">
-                    <input type="radio" name="leg_adjustments" value="2" style="margin-left:13%;">
+            <div class="row">
+                <div class="col-md">
+                    <h5>
+                        <b>Select Lower Arm Position</b>
+                    </h5>
+                    <img class="img-thumbnail" src="{% static 'lower_arm_60-100.png' %}"
+                        style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'lower_arm_0-60.png' %}"
+                        style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'lower_arm_100+.png' %}"
+                        style="width: 85px;height: 95px;">
+                    <br>
+                    <div>
+                        <input type="radio" name="lower_arm_position" value="1"
+                            style="margin-left:8%; display: inline-block;">
+                        <input type="radio" name="lower_arm_position" value="2" style="margin-left:10%;">
+                        <input type="radio" name="lower_arm_position" value="2" style="margin-left:12%;">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md">
-                <h6>Force/Load</h6>
-                <input type="radio" name="force_load" value="1">
-                <label for="force_load">Load is less than 11 Ibs</label><br>
-                <input type="radio" name="force_load" value="1">
-                <label for="force_load">Load is less than 11 Ibs and 22 Ibs</label><br>
-                <input type="radio" name="force_load" value="1">
-                <label for="force_load">Load is greater than 22 Ibs</label><br>
-                <input type="checkbox" id="force_load2" name="force_load2" value="1">
-                <label for="force_load2">Select if shock or rapid build up force</label>
-            </div>
-        </div>
-    </div>
-    <div class="container" style="width:auto;border-style:double; border-color:rgb(0, 0, 0);float: right">
-        <div class="row">
-            <div class="col-md">
-                <h5>
-                    <b>Select Upper Arm Position</b>
-                </h5>
-                <img class="img-thumbnail" src="{% static 'upper_arm 20-20.png' %}"
-                    style="width: 85px;height: 95px;"><img class="img-thumbnail"
-                    src="{% static 'upper_arm_20_in_extension.png' %}" style="width: 85px;height: 95px;"><img
-                    class="img-thumbnail" src="{% static 'upper_arm_20-45.png' %}"
-                    style="width: 85px;height: 95px;"><img class="img-thumbnail"
-                    src="{% static 'upper_arm_45-90.png' %}" style="width: 85px;height: 95px;"><img
-                    class="img-thumbnail" src="{% static 'upper_arm_90+.png' %}" style="width: 85px;height: 95px;">
-                <br>
-                <div>
-                    <input type="radio" name="upper_arm_position" value="1" style="margin-left:8%;">
-                    <input type="radio" name="upper_arm_position" value="2" style="margin-left:11%;">
-                    <input type="radio" name="upper_arm_position" value="2" style="margin-left:13%;">
-                    <input type="radio" name="upper_arm_position" value="3" style="margin-left:12%;">
-                    <input type="radio" name="upper_arm_position" value="4" style="margin-left:12%;">
+            <div class="row">
+                <div class="col-md">
+                    <h5>
+                        <b>Select Wrist Position</b>
+                    </h5>
+                    <img class="img-thumbnail" src="{% static 'wrist_15-15.png' %}" style="width: 85px;height: 95px;"><img
+                        class="img-thumbnail" src="{% static 'wrist_15+.png' %}" style="width: 85px;height: 95px;">
+                    <img class="img-thumbnail" src="{% static 'wrist_15-.png' %}" style="width: 85px;height: 95px;">
+                    <br>
+                    <div>
+                        <input type="radio" name="wrist_position" value="1" style="margin-left:8%; display: inline-block;">
+                        <input type="radio" name="wrist_position" value="2" style="margin-left:11%;">
+                        <input type="radio" name="wrist_position" value="2" style="margin-left:13%;">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md">
-                <h6>Upper Arm Adjustments (if select one applicable)</h6>
-                <input type="checkbox" id="upper_arm_adjustment1" name="upper_arm_adjustment1" value="1">
-                <label for="upper_arm_adjustment1">Shoulder is raised</label><br>
-                <input type="checkbox" id="upper_arm_adjustment2" name="upper_arm_adjustment2" value="1">
-                <label for="upper_arm_adjustment2">The upper arm is abducted</label><br>
-                <input type="checkbox" id="upper_arm_adjustment3" name="upper_arm_adjustment3" value="-1">
-                <label for="upper_arm_adjustment3">Arm is supported or person is leaning</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md">
-                <h5>
-                    <b>Select Lower Arm Position</b>
-                </h5>
-                <img class="img-thumbnail" src="{% static 'lower_arm_60-100.png' %}"
-                    style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'lower_arm_0-60.png' %}"
-                    style="width: 85px;height: 95px;"><img class="img-thumbnail" src="{% static 'lower_arm_100+.png' %}"
-                    style="width: 85px;height: 95px;">
-                <br>
-                <div>
-                    <input type="radio" name="lower_arm_position" value="1"
-                        style="margin-left:8%; display: inline-block;">
-                    <input type="radio" name="lower_arm_position" value="2" style="margin-left:10%;">
-                    <input type="radio" name="lower_arm_position" value="2" style="margin-left:12%;">
+            <div class="row">
+                <div class="col-md">
+                    <h6>Wrist Adjustments (select one if applicable)</h6>
+                    <input type="radio" name="wrist_adjustment" value="1">
+                    <label for="wrist_adjustment">Shoulder is raised</label><br>
+                    <input type="radio" name="wrist_adjustment" value="1">
+                    <label for="wrist_adjustment">The upper arm is abducted</label><br>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md">
-                <h5>
-                    <b>Select Wrist Position</b>
-                </h5>
-                <img class="img-thumbnail" src="{% static 'wrist_15-15.png' %}" style="width: 85px;height: 95px;"><img
-                    class="img-thumbnail" src="{% static 'wrist_15+.png' %}" style="width: 85px;height: 95px;">
-                <img class="img-thumbnail" src="{% static 'wrist_15-.png' %}" style="width: 85px;height: 95px;">
-                <br>
-                <div>
-                    <input type="radio" name="wrist_position" value="1" style="margin-left:8%; display: inline-block;">
-                    <input type="radio" name="wrist_position" value="2" style="margin-left:11%;">
-                    <input type="radio" name="wrist_position" value="2" style="margin-left:13%;">
+            <div class="row">
+                <div class="col-md">
+                    <h6>Coupling</h6>
+                    <input type="radio" name="coupling" value="0">
+                    <label for="coupling">Good</label>
+                    <input type="radio" name="coupling" value="1" style="margin-left:14%;">
+                    <label for="coupling">Poor</label><br>
+                    <input type="radio" name="coupling" value="2">
+                    <label for="coupling">Fair</label>
+                    <input type="radio" name="coupling" value="3" style="margin-left:16.5%;">
+                    <label for="coupling">Unacceptable</label>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md">
-                <h6>Wrist Adjustments (select one if applicable)</h6>
-                <input type="radio" name="wrist_adjustment" value="1">
-                <label for="wrist_adjustment">Shoulder is raised</label><br>
-                <input type="radio" name="wrist_adjustment" value="1">
-                <label for="wrist_adjustment">The upper arm is abducted</label><br>
+            <div class="row">
+                <div class="col-md">
+                    <h6>Activity Score (Select all that apply)</h6>
+                    <input type="checkbox" id="activity_score1" name="activity_score1" value="1">
+                    <label for="activity_score1">Select if there is 1 more body parts are held for longer than 1
+                        minute(static)</label><br>
+                    <input type="checkbox" id="activity_score2" name="activity_score2" value="1">
+                    <label for="activity_score2">Select if there repeated small range actions(more than
+                        4x/minute)</label><br>
+                    <input type="checkbox" id="activity_score3" name="activity_score3" value="-1">
+                    <label for="activity_score3">Select if there is an action causes rapid large changes in
+                        postures/unstable base</label>
+                </div>
             </div>
+            <input type="submit" class="btn-primary" value="Calculate Final REBA Score"
+                style="padding: 2%; border-radius:12px; margin-left: 65%;">
         </div>
-        <div class="row">
-            <div class="col-md">
-                <h6>Coupling</h6>
-                <input type="radio" name="coupling" value="0">
-                <label for="coupling">Good</label>
-                <input type="radio" name="coupling" value="1" style="margin-left:14%;">
-                <label for="coupling">Poor</label><br>
-                <input type="radio" name="coupling" value="2">
-                <label for="coupling">Fair</label>
-                <input type="radio" name="coupling" value="3" style="margin-left:16.5%;">
-                <label for="coupling">Unacceptable</label>
-            </div>
         </div>
-        <div class="row">
-            <div class="col-md">
-                <h6>Activity Score (Select all that apply)</h6>
-                <input type="checkbox" id="activity_score1" name="activity_score1" value="1">
-                <label for="activity_score1">Select if there is 1 more body parts are held for longer than 1
-                    minute(static)</label><br>
-                <input type="checkbox" id="activity_score2" name="activity_score2" value="1">
-                <label for="activity_score2">Select if there repeated small range actions(more than
-                    4x/minute)</label><br>
-                <input type="checkbox" id="activity_score3" name="activity_score3" value="-1">
-                <label for="activity_score3">Select if there is an action causes rapid large changes in
-                    postures/unstable base</label>
-            </div>
-        </div>
-        <input type="button" class="btn-primary" value="Calculate Final REBA Score"
-            style="padding: 2%; border-radius:12px; margin-left: 65%;">
-    </div>
-    </div>
+    </form>
 </body>
 
 </html>

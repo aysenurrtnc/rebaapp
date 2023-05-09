@@ -14,7 +14,8 @@ class Reba(models.Model):
 	trunkScore = models.IntegerField()
 
 	legPosition = models.CharField(max_length=30)
-	legScore = models.IntegerField()
+	legAdjust = models.CharField(max_length=30)
+	legScore = models.IntegerField(default=0)
 
 	postureScoreA = models.IntegerField()
 	flScore = models.IntegerField()
