@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 	
 class Reba(models.Model):
 	rebaID = models.IntegerField(primary_key = True)
-	userID = models.OneToOneField(User, on_delete=models.CASCADE)
+	userID = models.ForeignKey(User, on_delete=models.CASCADE)
 
 	neckPosition = models.CharField(max_length=30)
 	neckAdjust = models.CharField(max_length=30)
@@ -45,4 +45,4 @@ class Reba(models.Model):
 	finalRebaScore = models.IntegerField()
 
 	def __str__(self):
-		return f"Score is {self.finalRebaScore}"
+		return str(self.rebaID)
