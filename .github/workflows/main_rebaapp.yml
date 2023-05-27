@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'rebaapp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9E9A55D9EE884EADAACD6C692409E8F6 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3C814B1593244ABFA48204E0C20321FF }}
